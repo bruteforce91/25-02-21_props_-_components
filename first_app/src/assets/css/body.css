@@ -1,0 +1,18 @@
+main {
+    text-align: center; 
+    background-color:whitesmoke;
+    margin:30px;
+}
+
+main img{
+    width: 60%;
+    height: 50%;
+}
+main h3{
+    color:#282c34;
+    font-size: 30px;
+}
+main p{
+    color:grey;
+    font-size:20px;
+}

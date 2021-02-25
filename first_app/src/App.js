@@ -1,9 +1,8 @@
 
-import './App.css';
-import consola from '../node_modules/consola'
+//import consola from '../node_modules/consola'
 import Header from './components/Header'
 import Body from './components/Body';
-
+import Footer from './components/Footer';
 
 const data = {
   name: 'HappyShoes',
@@ -19,25 +18,27 @@ const date=new Date();
 const getYear=date.getFullYear()
 
 
-function handleClick(){
-  consola.success("Buona giornata!")
-}
+// function handleClick(){
+//   consola.success("Buona giornata!")
+// }
+
 function App() {
   return (
-    <div className="App">
+    <div>
       <Header name={data.name} logo={data.logo}/>
       <Body cover={data.cover} title={data.title} descr={data.description}/>
+      <Footer year={getYear} company={data.company}/>
     </div>
   );
 }
 export default App;
 
-
-  {/* <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo"  />
-      </header>
-      <main>
-        <h1>First App in React</h1>
-        <button onClick={handleClick}>Clicca</button>
-      </main>
-      <footer>Copyright by me - {getYear}</footer> */}
+  //esercizio del 23/02/2021
+  // {/* <header className="App-header">
+  //       <img src={logo} className="App-logo" alt="logo"  />
+  //     </header>
+  //     <main>
+  //       <h1>First App in React</h1>
+  //       <button onClick={handleClick}>Clicca</button>
+  //     </main>
+  //     <footer>Copyright by me - {getYear}</footer> */}
