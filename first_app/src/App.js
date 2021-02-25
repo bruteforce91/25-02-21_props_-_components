@@ -2,6 +2,7 @@
 import './App.css';
 import consola from '../node_modules/consola'
 import Header from './components/Header'
+import Body from './components/Body';
 
 
 const data = {
@@ -25,7 +26,7 @@ function App() {
   return (
     <div className="App">
       <Header name={data.name} logo={data.logo}/>
-      
+      <Body cover={data.cover} title={data.title} descr={data.description}/>
     </div>
   );
 }
