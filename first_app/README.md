@@ -1,70 +1,59 @@
-# Getting Started with Create React App
+Esercitazione Giovedì 25 febbraio
+Continuando a lavorare sul progetto precedente creato con npx create-react-app, inserire nella componente App il seguente oggetto:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+const data = {
+  name: 'HappyShoes',
+  logo: 'https://logoipsum.com/logo/logo-16.svg',
+  company: 'SZH Inc.',
+  cover: 'https://images.pexels.com/photos/4123897/pexels-photo-4123897.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+  title: 'Welcome to our brand new HappyShoes website!',
+  description: 'Lorem ipsum velit cillum excepteur adipisicing voluptate mollit. Laboris deserunt reprehenderit commodo id id minim non voluptate irure pariatur nulla.',
+}
+All'interno di App importare e usare 3 componenti figlie:
 
-## Available Scripts
+Header
+Body
+Footer
+Header
+Header dovrà essere una componente funzionale che riceve le seguenti props:
 
-In the project directory, you can run:
+logo (tipo String) - una URL all'immagine del logo del sito
+name (tipo String) - il nome del sito
+L'Header dovrà renderizzare un tag <header> con all'interno il logo del sito (<img />) e accanto il nome del sito (<span>).
 
-### `npm start`
+Body
+Body dovrà essere una componente di tipo class che riceve le seguenti props:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+cover (tipo String) - una URL all'immagine cover del sito
+title (tipo String) - l'intestazione della pagina
+description (tipo String) - la descrizione della pagina
+Il Body dovrà renderizzare un tag <main> contente un tag <img>, un tag <h1> e un tag <h2>.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Il tag <img> avrà come attributo src la prop cover
+Il tag <h1> avrà come contenuto la prop title
+Il tag <h2> avrà come contenuto la prop description
+Footer
+Footer dovrà essere una componente funzionale che riceve le seguenti props:
 
-### `npm test`
+company (tipo String) - il nome dell'azienda proprietaria del sito.
+Footer dovrà renderizzare un tag <footer> con al centro la seguante scritta:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+2021 © SZH Inc.
+La stinga 2021 dovrà essere ricavata tramite JavaScript e dovrà indicare l'anno corrente, mentre il nome dell'azienda sarà fornito dalla prop company.
 
-### `npm run build`
+Nice to have
+Cercare di stilizzare in maniera accattivante il tutto tramite CSS, possibilmente tenendo un file CSS separato per ogni componente importato nella componente stessa:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+import './Header.css';
+import './Body.css';
+import './Footer.css';
+Documentazione
+Classi in JavaScript
+MDN Classes
+javascript.info class
+html.it Prototipi e Classi
+React Components and props
+React: Components and props
+Pure functions (argomento opzionale avanzato)
+Eric Elliot - pure functions
+freecodecamp - pure functions
