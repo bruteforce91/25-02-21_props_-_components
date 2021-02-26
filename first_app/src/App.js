@@ -3,7 +3,7 @@
 import Header from './components/Header'
 import Body from './components/Body';
 import Footer from './components/Footer';
-
+import './App.css'
 
 const data = {
   name: "HappyShoes",
@@ -75,9 +75,9 @@ const getYear=date.getFullYear()
 
 function App() {
   return (
-    <div>
+    <div className="App">
       <Header name={data.name} logo={data.logo}/>
-      <Body cover={data.cover} title={data.title} descr={data.description} products={products}/>
+      <Body cover={data.cover} title={data.title} descr={data.description} products={data.products}/>
       <Footer year={getYear} company={data.company}/>
     </div>
   );

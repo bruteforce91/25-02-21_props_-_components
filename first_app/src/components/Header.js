@@ -1,8 +1,8 @@
-import '../assets/css/header.css'
+import './Header.css'
 
 function Header(props) {
   return (
-    <header className="header">
+    <header className="Header">
         <h2>{props.name}</h2>
         <img src={props.logo} className="App-logo" alt="logo" />
     </header>

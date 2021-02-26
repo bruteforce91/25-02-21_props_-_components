@@ -1,7 +1,7 @@
-import '../assets/css/footer.css'
+import './Footer.css'
 function Footer (props){
     return (
-        <footer className="footer">
+        <footer className="Footer">
             <h6>{props.year} ©{props.company}</h6>
         </footer>
     )

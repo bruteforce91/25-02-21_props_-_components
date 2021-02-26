@@ -1,5 +1,5 @@
 import React from "react";
-import "./body.css";
+import "./Body.css";
 import { PropTypes } from "prop-types";
 import Product from "./Product";
 
@@ -13,28 +13,38 @@ class Body extends React.Component {
   }
 
   handleClick() {
-    this.setState ({showProducts:true});
+    this.setState({ showProducts: true })
   }
   //props ci sono
   render() {
-    const { cover, title, descr, products} = this.props;
-    const { showProducts}=this.state;
+    const { cover, title, descr, products } = this.props;
+    const { showProducts } = this.state;
+    console.log(showProducts)
     return (
       <main className="Body">
-        <div>
-          <img src={cover} alt="body" />
+        <>
+          <img src={cover} alt={cover} />
           <h3>{title}</h3>
           <p>{descr}</p>
           <div className="products-container">
             {showProducts ? (
-              products.map((product) => {
-                return <li><Product title={product.title} image={product.image} price={product.price}/></li>
-              })
+              <ul>
+              {products.map((product) => {
+                return (
+                  <li>
+                    <Product
+                      title={product.title}
+                      image={product.image}
+                      price={product.price}
+                    />
+                  </li>
+              )})}
+              </ul>
             ) : (
-              <button onClick={this.handleClick}>Show Products</button>
+              <button onClick={()=>this.handleClick()}>Show Products</button>
             )}
           </div>
-        </div>
+        </>
       </main>
     );
   }
@@ -42,8 +52,9 @@ class Body extends React.Component {
 
 Body.propTypes = {
   title: PropTypes.string.isRequired,
-  cover:PropTypes.string.isRequired,
-  descr:PropTypes.string.isRequired,
+  cover: PropTypes.string.isRequired,
+  descr: PropTypes.string.isRequired,
 };
 
 export default Body;
+

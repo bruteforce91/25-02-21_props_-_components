@@ -1,12 +1,14 @@
 
 .Card {
     height: 400px;
-    width: 300px;
-    border-radius: 8px;
+    width: 250px;
+    border-radius: 13px;
     background-color: white;
+    font-size: 14px;
+    margin:10px;
 }
 
 .Card img {
     width: 90%;
-    height: 80%;
+    height: 70%;
 }

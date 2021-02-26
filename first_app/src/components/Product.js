@@ -8,7 +8,7 @@ export default class Product extends Component {
             <div className='Card'>
                 <h2>{title}</h2>
                 <img src={image} alt={image}/>
-                <h5>{price}</h5>
+                <h5>€ {price.toFixed(2)}</h5>
             </div>
         )
     }
