@@ -28,7 +28,8 @@ Body dovrà essere una componente di tipo class che riceve le seguenti props:
 cover (tipo String) - una URL all'immagine cover del sito
 title (tipo String) - l'intestazione della pagina
 description (tipo String) - la descrizione della pagina
-Il Body dovrà renderizzare un tag <main> contente un tag <img>, un tag <h1> e un tag <h2>.
+Il Body dovrà renderizzare un tag <main> contente un tag <img>, un tag <h1> 
+  e un tag <h2>.
 
 Il tag <img> avrà come attributo src la prop cover
 Il tag <h1> avrà come contenuto la prop title
