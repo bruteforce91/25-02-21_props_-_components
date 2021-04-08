@@ -1,4 +1,5 @@
-Esercitazione Giovedì 25 febbraio
+# Esercitazione Giovedì 25 febbraio
+
 Continuando a lavorare sul progetto precedente creato con npx create-react-app, inserire nella componente App il seguente oggetto:
 
 const data = {
